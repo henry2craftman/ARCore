@@ -9,11 +9,11 @@ public class ObjectManager : MonoBehaviour
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject showcaseObj;
     [SerializeField] float spawnTime = 1f;
-    public float SpawnTime { get; }
+    public float SpawnTime { get { return spawnTime; } }
     ARRaycastManager raycastManager;
     private float rotMultiplier = 0.1f;
     private float elapsedTime;
-    public float ElapsedTime { get; }
+    public float ElapsedTime { get { return elapsedTime; } }
 
 
     private void Awake()
@@ -72,6 +72,11 @@ public class ObjectManager : MonoBehaviour
 
                     elapsedTime = 0;
                 }
+            }
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                elapsedTime = 0;
             }
         }
     }

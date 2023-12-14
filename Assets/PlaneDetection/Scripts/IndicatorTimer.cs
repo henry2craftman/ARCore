@@ -11,6 +11,7 @@ public class IndicatorTimer : MonoBehaviour
     private void Awake()
     {
         objectManager = FindAnyObjectByType<ObjectManager>();
+        image = GetComponent<Image>();
     }
 
     // Update is called once per frame

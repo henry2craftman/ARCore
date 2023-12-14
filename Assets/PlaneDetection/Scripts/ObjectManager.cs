@@ -8,7 +8,13 @@ public class ObjectManager : MonoBehaviour
 {
     [SerializeField] GameObject indicator;
     [SerializeField] GameObject showcaseObj;
+    [SerializeField] float spawnTime = 1f;
+    public float SpawnTime { get; }
     ARRaycastManager raycastManager;
+    private float rotMultiplier = 0.1f;
+    private float elapsedTime;
+    public float ElapsedTime { get; }
+
 
     private void Awake()
     {
@@ -31,6 +37,7 @@ public class ObjectManager : MonoBehaviour
 
     /// <summary>
     /// 스크린을 터치하면 Object를 바닥에 위치시킨다.
+    /// 나중 터치 위치 - 처음 터치 위치 = 변화량 
     /// </summary>
     private void TouchScreen(ARRaycastHit hitInfo)
     {
@@ -40,14 +47,30 @@ public class ObjectManager : MonoBehaviour
 
             if(touch.phase == TouchPhase.Began)
             {
-                if(hitInfo.trackable)
+                elapsedTime = 0;
+            }
+            else if (touch.phase == TouchPhase.Moved)
+            {
+                Vector3 deltaPos = touch.deltaPosition;
+                showcaseObj.transform.Rotate(transform.up, -deltaPos.x * rotMultiplier);
+            }
+            else if(touch.phase == TouchPhase.Stationary)
+            {
+                elapsedTime += Time.deltaTime;
+
+                if (elapsedTime > spawnTime)
                 {
-                    showcaseObj.SetActive(true);
-                    showcaseObj.transform.position = hitInfo.pose.position;
-                }
-                else
-                {
-                    showcaseObj.SetActive(false);
+                    if (hitInfo.trackable)
+                    {
+                        showcaseObj.SetActive(true);
+                        showcaseObj.transform.position = hitInfo.pose.position;
+                    }
+                    else
+                    {
+                        showcaseObj.SetActive(false);
+                    }
+
+                    elapsedTime = 0;
                 }
             }
         }

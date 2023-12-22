@@ -13,6 +13,7 @@ public class ImageTracker : MonoBehaviour
         imageManager = GetComponent<ARTrackedImageManager>();
 
         imageManager.trackedImagesChanged += OnImageTrackedEvent;
+
     }
 
     void OnImageTrackedEvent(ARTrackedImagesChangedEventArgs args)

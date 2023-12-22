@@ -3,28 +3,103 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Android;
+using System;
 
 public class GPSManager : MonoBehaviour
 {
     [SerializeField] TMP_Text latitudeTxt;
     [SerializeField] TMP_Text longtitudeTxt;
-    [SerializeField] float gpsRenewalTime = 1;
-    [SerializeField] List<GPS> gps; 
+    [SerializeField] TMP_Text logText;
+    [SerializeField] float gpsRenewalTime = 1f;
+    [SerializeField] List<GPS> gps;
+    [SerializeField] float minimumDistance = 20f;
     double latitude = 0;
     double longtitude = 0;
+    CompassManager compass;
+    [SerializeField] List<GameObject> locationObjects = new List<GameObject>();
+
+    private void Awake()
+    {
+        compass = FindAnyObjectByType<CompassManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(TurnOnGPS());
+        //CreateLocationObj();
+        //CalculateDistance();
+    }
+
+    // 미터 단위로 계산된 거리를 지자계 센서의 각도 기준으로 회전변환
+    private void CreateLocationObj()
+    {
+        string log = "";
+        foreach(GPS location in gps)
+        {
+            float scaledPosX = (float)(location.latitude - latitude) * 100000;
+            float scaledPosY = (float)(location.longtitude - longtitude) * 100000;
+
+            log += location.name + "\n";
+
+            // 3751365, 12703062 -> 100m, 20m
+            log += "scaledPosX: " + scaledPosX + "/ scaledPosY " + scaledPosY + "\n";
+
+            float newX = Mathf.Cos(compass.Angle) * scaledPosX + (-Mathf.Sin(compass.Angle) * scaledPosY);
+            float newY = Mathf.Sin(compass.Angle) * scaledPosX + Mathf.Cos(compass.Angle) * scaledPosY;
+            Vector3 objPos = new Vector3(newX, 0, newY);
+
+            log += "newX: " + newX + "/ newY " + newY + "\n";
+
+            GameObject prefab = Resources.Load<GameObject>(location.name);
+
+            if(prefab != null)
+            {
+                GameObject locationObject = Instantiate(prefab);
+                locationObject.name = location.name;
+                locationObject.transform.position = objPos;
+
+                locationObject.SetActive(false);
+                locationObjects.Add(locationObject);
+
+                logText.text += log;
+            }
+            else
+            {
+                logText.text += "No prefab exsist";
+            }
+        }
+
+        
     }
 
     void CalculateDistance()
     {
+        string totalDistance = "";
+
         foreach(var restaurant in gps)
         {
             float distance = CalculateDistance(latitude, longtitude, restaurant.latitude, restaurant.longtitude);
+
+            if(locationObjects != null)
+            {
+                GameObject restaurnatObj = locationObjects.Find(obj => obj.name == restaurant.name);
+
+                totalDistance += restaurnatObj.name + ": " + distance + "m\n";
+
+                // Location Object 활성화
+                if (distance < minimumDistance)
+                {
+                    restaurnatObj.SetActive(true);
+                }
+                else
+                {
+                    restaurnatObj.SetActive(false);
+                }
+            }
         }
+
+        logText.text = totalDistance;
     }
 
     float CalculateDistance(double fromX, double fromY, double toX, double toY)
@@ -82,7 +157,8 @@ public class GPSManager : MonoBehaviour
             yield break;
         }
 
-        while(Input.location.status == LocationServiceStatus.Running)
+        int tempNumber = 0;
+        while (Input.location.status == LocationServiceStatus.Running)
         {
             yield return new WaitForSeconds(gpsRenewalTime);
 
@@ -91,6 +167,12 @@ public class GPSManager : MonoBehaviour
 
             latitudeTxt.text = string.Format("{0:F6}", latitude);
             longtitudeTxt.text = string.Format("{0:F6}", longtitude);
+
+            if(tempNumber == 0)
+            {
+                CreateLocationObj();
+                tempNumber = 1;
+            }
 
             CalculateDistance();
         }

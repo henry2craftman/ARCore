@@ -12,6 +12,7 @@ public class GPSManager : MonoBehaviour
     [SerializeField] TMP_Text logText;
     [SerializeField] float gpsRenewalTime = 1f;
     [SerializeField] List<GPS> gps;
+    public List<GPS> Gps { get { return gps; } }
     [SerializeField] float minimumDistance = 20f;
     double latitude = 0;
     double longtitude = 0;
@@ -27,8 +28,6 @@ public class GPSManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(TurnOnGPS());
-        //CreateLocationObj();
-        //CalculateDistance();
     }
 
     // 미터 단위로 계산된 거리를 지자계 센서의 각도 기준으로 회전변환

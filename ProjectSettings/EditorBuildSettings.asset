@@ -6,9 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ImageDetection/ImageDetection.unity
-    guid: db738cf923c23fe4397e5b6b7f3dfc9c
+    path: Assets/Geospatial/Geospatial.unity
+    guid: b4ee2a5601246b549b53b0075e02786a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 4cc266dc2abd34c489dd20ab5b42ecea, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: dfb381bc6c70ec8478c04268f00a6d6f, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 186ea75318fd3f0409d34cb929ad5468, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a192b37dae215bc478a12c0dfbd382e2, type: 2}

@@ -159,6 +159,8 @@ public class GPSManager : MonoBehaviour
         int tempNumber = 0;
         while (Input.location.status == LocationServiceStatus.Running)
         {
+            Input.location.Start();
+
             yield return new WaitForSeconds(gpsRenewalTime);
 
             latitude = Input.location.lastData.latitude;

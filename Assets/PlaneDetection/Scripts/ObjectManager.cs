@@ -33,6 +33,7 @@ public class ObjectManager : MonoBehaviour
         ARRaycastHit hitInfo = CastARRay();
 
         TouchScreen(hitInfo);
+
     }
 
     /// <summary>
@@ -104,4 +105,20 @@ public class ObjectManager : MonoBehaviour
 
         return hitInfo[0];
     }
+
+    //private void CastRay()
+    //{
+    //    Touch touch = Input.GetTouch(0);
+    //    Ray ray = Camera.main.ScreenPointToRay(touch.position);
+
+    //    RaycastHit hitinfo;
+
+    //    Vector3 touchWorldPos = Camera.main.ScreenToWorldPoint(touch.position);
+    //    Debug.DrawRay(touchWorldPos, transform.forward * 10, Color.red, 5);
+
+    //    if(Physics.Raycast(ray, out hitinfo))
+    //    {
+            
+    //    }
+    //}
 }

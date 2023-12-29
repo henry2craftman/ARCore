@@ -49,36 +49,52 @@
 </br>
 
 <h2 id="plane-detection"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/PlaneDetection">💡 Plane Detection</a></h2>
-- AR PlaneManager: 평면 감지, 평면 추적, 평면 정보 획득 (크기, 위치, 방향)
-- AR Raycast Manager: 평면을 위한 레이 캐스팅, 첫 번째 충돌 물체 정보 획득 (타입, 위치)
+
+- AR PlaneManager
+  - 평면 감지, 평면 추적, 평면 정보 획득 (크기, 위치, 방향)
+- AR Raycast Manager
+  - 평면을 위한 레이 캐스팅, 첫 번째 충돌 물체 정보 획득 (타입, 위치)
 
 </br>
 
 </br>
 
 <h2 id="face-detection"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/FaceDetection">🤡 Face Detection</a></h2>
-- Center Pose: 얼굴 중심 위치 및 회전 획득
-- Region Pose: 얼굴의 코 끝, 이마 좌, 우의 위치 및 회전 획득
-- 468 Facial Features: 468개의 얼굴 특징 위치 및 회전 획득
+
+- Center Pose
+  - 얼굴 중심 위치 및 회전 획득
+- Region Pose
+  - 얼굴의 코 끝, 이마 좌, 우의 위치 및 회전 획득
+- 468 Facial Features
+  - 468개의 얼굴 특징 위치 및 회전 획득
 
 </br>
 
 </br>
 
 <h2 id="image-detection"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/ImageDetection">🖼️ Image Detection</a></h2>
-- AR Image Library와 Tracked Image Manager: 이미지 라이브러리 제공, 이미지 추적
-- Tracked Image에 따른 객체 생성: 추적된 이미지에 따른 객체 생성
-- GPS 클래스를 사용한 GPS Manager: 디바이스의 GPS 정보 획득
+
+- AR Image Library와 Tracked Image Manager
+  - 이미지 라이브러리 제공, 이미지 추적
+- Tracked Image에 따른 객체 생성
+  - 추적된 이미지에 따른 객체 생성
+- GPS 클래스를 사용한 GPS Manager
+  - 디바이스의 GPS 정보 획득
 
 </br>
 
 </br>
 
 <h2 id="firebase"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/ImageDetection">🖥️ Firebase Realtime Database</a></h2>
-- Firebase Realtime Database: 실시간 데이터베이스 액세스
-- Object to Json: 객체를 JSON으로 변환
-- Json Uploader: JSON 데이터를 Firebase Realtime Database에 업로드
-- Json Downloader: JSON 데이터를 Firebase Realtime Database에서 다운로드
+
+- Firebase Realtime Database
+  - 실시간 데이터베이스 액세스
+- Object to Json
+  - 객체를 JSON으로 변환
+- Json Uploader
+  - JSON 데이터를 Firebase Realtime Database에 업로드
+- Json Downloader
+  - JSON 데이터를 Firebase Realtime Database에서 다운로드
 * 해당 기능은 Image Detection Scene에 포함되어 있습니다.
 
 </br>

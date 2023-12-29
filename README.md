@@ -6,16 +6,6 @@
 
 # ARCore 프로젝트 입니다.
 
-<div align=center>
-
-
-[![author](https://img.shields.io/badge/author-henry-ff69b4.svg?style=flat-square)](https://jbee.io/about)
-[![CONTRIBUTORS](https://img.shields.io/badge/contributors-5-green.svg?style=flat-square)](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/blob/master/CONTRIBUTING.md)
-
-<a href="https://github.com/henry2craftman/ARCore/graphs/contributors"><img src="https://opencollective.com/interview_question_for_beginner/contributors.svg?width=720"></a>
-
-</div>
-
 > 해당 Repository 에 기여를 해주신 분들입니다. 감사합니다. :pray:
 
 </br>

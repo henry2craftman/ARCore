@@ -1777,9 +1777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: 0
-  _latitude: 37.51376934193075
-  _longitude: 127.03043991291892
-  _altitude: 51.6
+  _latitude: 37.51376934193598
+  _longitude: 127.03043991291628
+  _altitude: 51.60000000032734
   _altitudeType: 0
   _anchorManager: {fileID: 0}
 --- !u!4 &784256103
@@ -2105,9 +2105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _altitudeOffset: 0
-  _latitude: 37.513780607216404
-  _longitude: 127.02959362749041
-  _altitude: 51.6
+  _latitude: 37.513780607213256
+  _longitude: 127.02959362748993
+  _altitude: 51.599999999447824
   _altitudeType: 0
   _anchorManager: {fileID: 0}
 --- !u!4 &995046440

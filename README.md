@@ -95,7 +95,7 @@
 </br>
 
 
-## Getting Started
+## 🕶️ Getting Started
 1. 상기 기능에 해당하는 폴더로 들어갑니다.
 2. Scenes 폴더에서 상기 기능에 해당하는 Scene을 실행합니다.
 
@@ -106,12 +106,12 @@
 
 </br>
 
-## Contribution
+## 🤝 Contribution
 
 > 3기 수강생 여러분들 참여에 감사드립니다. 👍
 
 </br>
 
-## License
+## 🔖 License
 
 -

@@ -1,4 +1,4 @@
-# Plane Detection
+# Image Detection
 <img src="/Images/planeDetectionApp.jpg" width="25%" height="30%" title="px(픽셀) 크기 설정" alt="FaceDetectionApp"></img>
 
 <h2 id="table-of-contents">📝 Table of Contents</h2>

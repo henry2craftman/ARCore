@@ -24,24 +24,24 @@
 
 - [What is this?](#what-is-this)
 - [Plane Detection](#plane-detection)
-  - [AR PlaneManager]
-  - [AR Raycast Manager]
+  - [AR PlaneManager]()
+  - [AR Raycast Manager]()
 - [Face Detection](#face-detection)
-  - [Center Pose](https://github.com/JaeYeopHan/Beginner_for_interview/tree/master/Java)
-  - [Region Pose]
-  - [468 Facial Features]
+  - [Center Pose]()
+  - [Region Pose]()
+  - [468 Facial Features]()
 - [Image Detection](#image-detection)
-  - [AR Image Library와 Tracked Image Manager](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/MachineLearning)
-  - [Tracked Image에 따른 객체 생성]
-  - [GPS 클래스를 사용한 GPS Manager]
+  - [AR Image Library와 Tracked Image Manager]()
+  - [Tracked Image에 따른 객체 생성]()
+  - [GPS 클래스를 사용한 GPS Manager]()
 - [Firebase](#firebase)
-  - [Firebase Realtime Database](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
-  - [Object to Json]
-  - [Json Uploader]
-  - [Json Uploader]
+  - [Firebase Realtime Database]()
+  - [Object to Json]()
+  - [Json Uploader]()
+  - [Json Uploader]()
 - [Geospatial](#geospatial)
-  - [Geospatial API 데모](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
-  - [Geospatial Creator를 사용한 VPS 데모]
+  - [Geospatial API 데모]()
+  - [Geospatial Creator를 사용한 VPS 데모]()
 - [Getting Started](#getting-started)
 - [Contribution](#contribution)
 - [License](#license)
@@ -57,7 +57,7 @@
 
 </br>
 
-## Plane Detection [Link] https://github.com/henry2craftman/ARCore/tree/main/Assets/ImageDetection)
+## Plane Detection [Link](https://github.com/henry2craftman/ARCore/tree/main/Assets/ImageDetection)
 - AR PlaneManager
 - AR Raycast Manager
 

@@ -110,8 +110,8 @@
 
 </br>
 
+<h2 id="getting-started"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/Geospatial">🕶️ Getting Started</a></h2>
 
-## 🕶️ Getting Started
 1. 상기 기능에 해당하는 폴더로 들어갑니다.
 2. Scenes 폴더에서 상기 기능에 해당하는 Scene을 실행합니다.
 
@@ -122,7 +122,7 @@
 
 </br>
 
-## 🤝 Contribution
+<h2 id="contribution"><a href="https://github.com/henry2craftman/ARCore/tree/main/Assets/Geospatial">🤝 Contribution</a></h2>
 
 > 3기 수강생 여러분들 참여에 감사드립니다. 👍
 
